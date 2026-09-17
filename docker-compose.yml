@@ -1,0 +1,17 @@
+services:
+  higress:
+    image: higress-registry.cn-hangzhou.cr.aliyuncs.com/higress/all-in-one:latest
+    restart: unless-stopped
+    environment:
+      MODE: full
+      O11Y: "off"
+      USE_PLUGIN_SERVER: "on"
+    volumes:
+      - higress_data:/data
+    expose:
+      - "8001"
+      - "8080"
+      - "8443"
+
+volumes:
+  higress_data:
