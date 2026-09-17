@@ -9,7 +9,7 @@ A minimal, Git-backed deployment of the official Higress All-in-One image.
 
 ## Deployment
 
-Coolify reads `docker-compose.yml` from the `main` branch. Use **Deploy** for the first release and **Redeploy** after repository changes.
+Coolify reads `docker-compose.yml` from the `main` branch. Pushes to `main` automatically trigger a deployment through the repository-scoped GitHub App webhook. Manual deployment remains available from **Actions → Deploy** in Coolify.
 
 Configuration is persisted in the `higress_data` Docker volume mounted at `/data`. Observability is disabled to keep resource usage appropriate for the current VPS.
 
