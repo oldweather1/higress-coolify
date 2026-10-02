@@ -1,6 +1,7 @@
 services:
   higress:
-    image: higress-registry.cn-hangzhou.cr.aliyuncs.com/higress/all-in-one:latest
+    # Exact image already running on the VPS, not an upgrade via mutable latest.
+    image: higress-registry.cn-hangzhou.cr.aliyuncs.com/higress/all-in-one@sha256:113ea2a6a673f627b13338bf399d42322b85ccbdd9ddc7f521fa6557d4cf7423
     restart: unless-stopped
     environment:
       MODE: full

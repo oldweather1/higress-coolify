@@ -16,3 +16,18 @@ Configuration is persisted in the `higress_data` Docker volume mounted at `/data
 ## Important
 
 Higress documents standalone mode as suitable mainly for development, testing, and proof-of-concept workloads. For large-scale production use, prefer the Kubernetes/Helm deployment model.
+
+## Console password recovery
+
+See [the scoped recovery procedure](docs/CONSOLE-PASSWORD-RECOVERY.md). It uses
+the official password-change endpoint with operator-entered hidden input. It does
+not clear gateway configuration or restart services. Never commit credentials
+or the VPS-only Secret backup. Publishing documentation must not cause an
+unnecessary `latest` image redeployment just to recover a password.
+
+## Free GLM onboarding
+
+See [the free GLM staged onboarding record](docs/GLM-FREE-ONBOARDING.md), including
+the authorized switch from GLM-4.7-Flash to `glm-4-flash-250414`.
+Provider registration alone is not evidence that a protected gateway route or
+Agent Hub inference has been deployed or tested.
